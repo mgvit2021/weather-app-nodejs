@@ -1,0 +1,27 @@
+<div class="container">
+<div class="mt-4 center card">
+    <div class="card-header text-center">
+        <h2>Get realtime weather!  <i class="fas fa-sun"></i></h2>
+      </div>
+      <div class="card-body">
+        <form action="/" method="POST">
+            <div class="form-group">
+              <label for="city">Enter City:</label>
+              <input type="text" class="form-control" id="city" placeholder="Enter city" name="city">
+            </div>
+            <input style="padding-right: 5px;padding:10px;" type="submit" class="btn btn-primary">
+        </form>
+
+      </div>
+</div>
+<p class="text-center mt-4">
+    <% if(weather!==null){%>
+        <code style="font-size:20px;"><%= weather%></code>
+    <%} %>
+    
+    <% if(error!==null){%>
+       <u><i><%= error%></i></u>
+    <%} %>
+
+</p>
+</div>
